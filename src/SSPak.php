@@ -366,8 +366,7 @@ EOM;
 				// If there is a current branch, use that branch's remove
 				$currentBranch = trim($matches[1]);
 				$output = $webroot->exec(array('git', '--git-dir='.$gitRepo, 'config','--get',"branch.$currentBranch.remote"));
-				$remoteName = trim($output['output']);
-				if(!$remoteName) $remoteName = 'origin';
+				$remoteName = 'origin';
 
 			// Default to origin
 			} else {
