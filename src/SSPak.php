@@ -365,7 +365,7 @@ EOM;
 			if(preg_match("/\* ([^ \n]*)/", $output['output'], $matches) && strpos("(no branch)", $matches[1])===false) {
 				// If there is a current branch, use that branch's remove
 				$currentBranch = trim($matches[1]);
-				$output = $webroot->exec(array('git', '--git-dir='.$gitRepo, 'config','--get',"branch.$currentBranch.remote"));
+				// $output = $webroot->exec(array('git', '--git-dir='.$gitRepo, 'config','--get',"branch.$currentBranch.remote"));
 				$remoteName = 'origin';
 
 			// Default to origin
